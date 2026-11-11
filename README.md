@@ -1,4 +1,7 @@
 # Tic-Tac-Toe Game
+## Preview
+
+![Tic-Tac-Toe Game](tic-tac-toe-preview.png)
 
 A simple and interactive two-player Tic-Tac-Toe game built using HTML, CSS, and JavaScript.
 
