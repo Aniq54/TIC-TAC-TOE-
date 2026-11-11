@@ -1,0 +1,132 @@
+
+/* Main page */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #141e30, #243b55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: white;
+}
+
+/* Game container */
+.game-container {
+    text-align: center;
+    background: #1e293b;
+    padding: 35px;
+    border-radius: 20px;
+    width: 340px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* Heading */
+h1 {
+    color: #a78bfa;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+/* Player status */
+#status {
+    color: #67e8f9;
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+/* Scoreboard */
+.scoreboard {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+.scoreboard p {
+    background: #334155;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+/* Game board */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 90px);
+    gap: 10px;
+    justify-content: center;
+}
+
+/* Individual cells */
+.cell {
+    width: 90px;
+    height: 90px;
+    font-size: 38px;
+    font-weight: bold;
+    background: #334155;
+    border: 2px solid #475569;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+/* X colour */
+.cell.x {
+    color: #a78bfa;
+}
+
+/* O colour */
+.cell.o {
+    color: #67e8f9;
+}
+
+/* Hover effect */
+.cell:hover {
+    background: #475569;
+    transform: scale(1.04);
+}
+
+/* Winning cells */
+.cell.winner {
+    background: #166534;
+    border-color: #4ade80;
+    color: white;
+}
+
+/* Reset button */
+#reset {
+    margin-top: 25px;
+    padding: 12px 30px;
+    background: linear-gradient(90deg, #7c3aed, #4f46e5);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+#reset:hover {
+    transform: scale(1.05);
+    background: #6d28d9;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 450px) {
+    .game-container {
+        width: 300px;
+        padding: 20px;
+    }
+
+    .board {
+        grid-template-columns: repeat(3, 80px);
+    }
+
+    .cell {
+        width: 80px;
+        height: 80px;
+    }
+}
